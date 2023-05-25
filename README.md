@@ -68,7 +68,7 @@ engagement_by_hour = data.groupby('hour_of_day')
 ```
 This sorts the dataframe by the day of weeks and hour of the day for easier aggregate analysis.
 
-🔧 [Link to Jupyter Notebook](https://github.com/codinglovespri/BellabeatCaseStudy/blob/89f5566c740876ef5a602267910f980a7c6295de/Bellabeat%20Analysis%20-%20Google%20Data%20Analytics%20Capstone.ipynb)  
+🔧 [Link to Jupyter Notebook](https://github.com/JingChengGu/EG-Social-Analysis/blob/main/social_analysis.ipynb)
 
 
 ## 4. Analyze 📊    
