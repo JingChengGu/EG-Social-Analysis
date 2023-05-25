@@ -1,7 +1,7 @@
 # Evil Geniuses Social Media Analysis  
 
 ## 💡Scenario💡  
-Bellabeat is a professional esports organization with teams competing in various video games. It was founded in 1999 and has since become one of the most popular and successful organizations in the esports scene. In this case, I will analyze the social media marketing data to guide marketing strategy for the organization to enhance its engagement rate from the audience. 		
+Bellabeat is a professional esports organization with teams competing in various video games. It is one of the most popular and successful organizations in the esports scene and is known for its dedicated fan base and top-tier talent. In this case, I will analyze the social media marketing data to guide marketing strategy for the organization to enhance its engagement rate from the audience. 		
 
 I will be using the six step data analysis process: 
 Ask, Prepare, Process, Analyze, Share, Act
