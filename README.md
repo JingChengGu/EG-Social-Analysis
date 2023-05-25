@@ -1,17 +1,29 @@
 # Evil Geniuses Social Media Analysis  
 
 ## 💡Scenario💡  
-Bellabeat is a professional esports organization with teams competing in various video games. It is one of the most popular and successful organizations in the esports scene and is known for its dedicated fan base and top-tier talent. In this case, I will analyze the social media marketing data to guide marketing strategy for the organization to enhance its engagement rate from the audience. 		
+Evil Geniuses is a professional esports organization with teams competing in various video games. It is one of the most popular and successful organizations in the esports scene and is known for its dedicated fan base and top-tier talent. In this case, I will analyze the social media marketing data to guide marketing strategy for the organization to enhance its engagement rate from the audience. 		
 
 I will be using the six step data analysis process: 
 Ask, Prepare, Process, Analyze, Share, Act
 
 ## 1. Ask ❓ 
 
-#### Task:   
-Analyze Fitbit data to gain insight and help guide marketing strategy for Bellabeat to grow as a global player.   
-#### Stakeholders:   
-Urška Sršen and Sando Mur (executive team members), and the Bellabeat marketing analytics team
+#### Main Task:   
+Analyze social media data to gain insight and help guide marketing strategy for Evil Geniuses to grow its engagement rate.
+#### Task 1: 
+What is the typical engagement rate EG can expect? What’s the likelihood that we can achieve a 15% engagement rate?
+#### Task 2: 
+Does day of the week and time of posting affect engagement rates?
+#### Task 3:
+How are EG game titles doing in terms of social performance? Is there a specific game EG should focus more on or less?
+#### Task 4: 
+What media type performs the best?
+#### Task 5:
+What is our best performing campaign?
+#### Task 6:
+Define out a posting strategy for our social channels based on your discoveries.
+#### Task 7:
+What suggestions would you give to the social media team if they want to expand their presence (e.g. if our CSGO youtube channel is doing well should we expand to TikTok)?
 ## 2. Prepare ⚙️  
 #### Data Source:   
 30 participants FitBit Fitness Tracker Data from Mobius: https://www.kaggle.com/arashnic/fitbit    
