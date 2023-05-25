@@ -39,6 +39,23 @@ The dataset contains limitations:
 data = pd.read_excel("social_data.xlsx")
 data
 ```
+The start date & time was 01/01/2023 2:59 PM, end date & time was 03/31/2023 07:55 PM.
+
+
+### Drop duplicate or NA values  
+There were 47 duplicate rows, so I updated the data frame without the duplicates.  
+```diff
+data = data.drop_duplicates()
+data
+``` 
+There were 1485 Campaigns that are categorized as N/As, so I created a new data frame without the N/As.  
+```diff
+data['Campaign Name'] = data['Campaign Name'].str.strip()
+campaign_performance = data.groupby('Campaign Name').agg({'Total Engagements': 'sum', 'Total Impressions': 'sum'})
+no_NA = campaign_performance.drop("N/A")
+``` 
+
+### Clean Data   
 Group the data by day of the week.
 ```diff
 week_order = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -49,42 +66,7 @@ Group the data by the hour of the day.
 ```diff
 engagement_by_hour = data.groupby('hour_of_day')
 ```
-The start date & time was 01/01/2023 2:59 PM, end date & time was 03/31/2023 07:55 PM.
-
-
-### Check for duplicate or NA values    
-```diff
-SELECT ID, ActivityDate 
-FROM daily_activity
-GROUP BY ID, ActivityDate
-HAVING COUNT(*) > 1; 
-```  
-For the daily activity table, there are no duplicate rows based on the results from the query above.
-```diff
-SELECT ID, SleepDay 
-FROM sleep_log
-GROUP BY ID, SleepDay
-HAVING COUNT(*) > 1;
-CREATE TABLE sleep_log_unique SELECT DISTINCT * FROM sleep_log;
-```
-For the sleep log table, there were 3 duplicate rows, so I created a new sleep log table without the duplicates.
-```diff
-SELECT ID, Date, WeightKg 
-FROM weight_log
-GROUP BY ID, Date, WeightKg 
-HAVING COUNT(*) > 1;
-```
-For the weight log table, there were no duplicate rows.
-
-### Clean Data  
-* I first converted the date columns to day of the week using Excel, then imported the csv file into Jupyter Notebook for aggregate analysis. 
-```diff
-activity['DayofWeek'] = pd.Categorical(activity['DayofWeek'], ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
-activity = activity.sort_values('DayofWeek')
-```
-This sorts the dataframe by the day of weeks for easier aggregate analysis.
-
-🔧 [Link to SQL script](https://github.com/codinglovespri/BellabeatCaseStudy/blob/89f5566c740876ef5a602267910f980a7c6295de/bellabeat.sql)  
+This sorts the dataframe by the day of weeks and hour of the day for easier aggregate analysis.
 
 🔧 [Link to Jupyter Notebook](https://github.com/codinglovespri/BellabeatCaseStudy/blob/89f5566c740876ef5a602267910f980a7c6295de/Bellabeat%20Analysis%20-%20Google%20Data%20Analytics%20Capstone.ipynb)  
 
