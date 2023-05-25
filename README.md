@@ -8,7 +8,7 @@ Ask, Prepare, Process, Analyze, Share, Act
 
 ## 1. Ask ❓ 
 
-#### Main Task:   
+#### Main Goal:   
 Analyze social media data to gain insight and help guide marketing strategy for Evil Geniuses to grow its engagement rate.
 #### Task 1: 
 What is the typical engagement rate EG can expect? What’s the likelihood that we can achieve a 15% engagement rate?
@@ -19,49 +19,37 @@ How are EG game titles doing in terms of social performance? Is there a specific
 #### Task 4: 
 What media type performs the best?
 #### Task 5:
-What is our best performing campaign?
+What is EG's best performing campaign?
 #### Task 6:
-Define out a posting strategy for our social channels based on your discoveries.
+Define out a posting strategy for the EG social channels based on discoveries.
 #### Task 7:
-What suggestions would you give to the social media team if they want to expand their presence (e.g. if our CSGO youtube channel is doing well should we expand to TikTok)?
+What suggestions I would give to the social media team if they want to expand their presence (e.g. if our CSGO youtube channel is doing well should we expand to TikTok)?
 ## 2. Prepare ⚙️  
 #### Data Source:   
-30 participants FitBit Fitness Tracker Data from Mobius: https://www.kaggle.com/arashnic/fitbit    
+3000+ Cases of Social Media Data from Jan 1st 2023 to Mar 31st 2023. social_data.xlsx
 
 The dataset contains limitations:   
-* The sample size is 30 people, which is not representative of the true population that uses Bellabeat products.
-* There are 28 IDs that do not show up on either the weight log or sleep log table, so some records are missing. 
-* The dataset is from 2016, so user habits from 6 years ago may be different.     
-
-
-The dataset contains 18 CSV files, and aligns with the ROCCC approach:
-* Reliability: The data contains data from 30 FitBit users who consented to the submission of personal tracker data and a distributed survey via Amazon Mechanical Turk.
-* Original: The data is from 30 FitBit users who consented to the submission of personal tracker data via Amazon Mechanical Turk.
-* Comprehensive: For physical activity, heart rate, and sleep monitoring, the data is represented in minutes. Though the data tracks a variety of factors that influence a user’s activity level, the sample size is on the smaller side.
-* Current: Data is from March 2016 to May 2016. The dataset is 6 years old as of date of analysis, so user habits may be different now.
-* Cited: Unknown.
+* There are 1485 Campaigns that are categorized as N/As and not rational to be included to the campign analysis process.  
+* There are 9 media types that are categorized as "Carousel", 5 media types that are categorized as "Mixed", and 4 media types that are categorized as "Album" while the rest of the media types are in the counts of hundreds or thousands. It would be improper to evaluate these three media types' engagement rates as they have a low simple size in comparision to the other media types.
 
 
 ## 3. Process 💻    
 ### Explore and examine data
 ```diff
-ALTER TABLE dailyactivity_merged RENAME TO daily_activity;
-ALTER TABLE sleepday_merged RENAME TO sleep_log;
-ALTER TABLE weightloginfo_merged RENAME TO weight_log;
+data = pd.read_excel("social_data.xlsx")
+data
 ```
-Changing the table names to match naming conventions.
+Group the data by day of the week.
 ```diff
-SELECT distinct d.Id 
-FROM daily_activity AS d;
-/* Find the number of participants in the study */
+week_order = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+data['day_of_week'] = pd.Categorical(data['day_of_week'], categories=week_order, ordered=True)
+data = data.sort_values('day_of_week')
 ```
-There were 33 participants in the study.
+Group the data by the hour of the day.
 ```diff
-SELECT MIN(ActivityDate) AS startDate, MAX(ActivityDate) AS endDate
-FROM daily_activity;
-/* Find the start and end date of the study */
+engagement_by_hour = data.groupby('hour_of_day')
 ```
-The start date was 4/12/2016, end date 5/9/2016.
+The start date & time was 01/01/2023 2:59 PM, end date & time was 03/31/2023 07:55 PM.
 
 
 ### Check for duplicate or NA values    
