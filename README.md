@@ -72,7 +72,7 @@ This sorts the dataframe by the day of weeks and hour of the day for easier aggr
 
 
 ## 4. Analyze 📊    
-#### Task 1:
+### Task 1:
 What is the typical engagement rate EG can expect? What’s the likelihood that we can achieve a 15% engagement rate?
 ```diff
 # Calculate the average engagement rate
@@ -85,7 +85,7 @@ print("Likelihood of achieving 15% engagement rate is {:.2%}.".format(likelihood
 ```
 The average engagement rate is 8.51%.
 The likelihood of achieving 15% engagement rate is 6.35%.
-#### Task 2:
+### Task 2:
 Does day of the week and time of posting affect engagement rates?
 ```diff
 # Find the best performing day of the week for engagement rate
@@ -117,7 +117,7 @@ print("The worst performing hour of the day for engagement rate is: {} at {:.2%}
 The best performing hour of the day for engagement rate is: 05:00 AM at 23.52%.
 The worst performing hour of the day for engagement rate is: 11:00 PM at 0.71%.		
 
-#### Task 3:
+### Task 3:
 How are EG game titles doing in terms of social performance? Is there a specific game EG should focus more on or less?
 ```diff
 best_acc_rate = game_performance.loc[best_account, 'Engagement Rate']
@@ -133,7 +133,7 @@ The best performing account is the "General" account with the engagement rate of
 The best performing account without including "General" is the "DOTA2" account with the engagement rate of 6.67%.
 The worst performing account is the "Content Creators" account with the engagement rate of 3.07%.
 
-#### Task 4:
+### Task 4:
 What media type performs the best?
 ```diff
 best_media = media_performance['Engagement Rate'].idxmax()
@@ -154,7 +154,7 @@ The best performing media is the "Album" media with the engagement rate of 40.00
 The worst performing media is the "Link" media with the engagement rate of 0.97%.
 The best performing media that is not the album media is the "Photo" media with the engagement rate of 8.88%.
 
-#### Task 5: 
+### Task 5: 
 What is EG's best performing campaign?
 ```diff
 best_campaign = campaign_performance['Engagement Rate'].idxmax()
@@ -168,7 +168,7 @@ print('Best Performing Campaign aside from "NA" is "{}" with {:.02%}.'.format(be
 Best Performing Campaign is categorized as N/A with 14.07% and these are the campaigns that are not categorized.
 Best Performing Campaign aside from "NA" is "Community Engagement" with 8.38%.
 
-#### Task 6:
+### Task 6:
 Define out a posting strategy for the EG social channels based on discoveries.
 
 #### Suggestion 1. Timing:
@@ -183,7 +183,7 @@ Avoid Posting at 11:00 PM: Make sure to avoid posting around 11:00 PM as it appe
 
 #### Suggestion 2. Account Types:
 
-General Account: As the engagement rate is highest for the general account, ensure a blanced content such as highlights, behind-the-scenes footage, team updates, and exclusive interviews with players.
+General Account: As the engagement rate is highest for the general account, ensure to focus on this account for creating a blanced content such as highlights, behind-the-scenes footage, team updates, and exclusive interviews with players.
 
 DOTA2 Account: The DOTA2 account shows high engagement out of all gaming accounts, so allocate specific resources to create content tailored to DOTA2 fans. Share match highlights, analysis, player interviews, and exclusive content related to the DOTA2 scene.
 
@@ -201,10 +201,10 @@ Focus on Community Engagement Campaigns: Allocate resources and time to create m
 
 Album Media Type: While the engagement rate appears highest for album media type, the sample size is too small to be considered valid. Nonetheless, continue monitoring and experimenting with album posts to see if they consistently generate higher engagement.
 
-#### Task 7:
+### Task 7:
 What suggestions would I give to the social media team if they want to expand their presence (e.g. if our CSGO youtube channel is doing well should we expand to TikTok)?
 
-- I would suggest we begin by conducting market research to understand the target audience on other potential platforms. Determine if the audience aligns with the desired target market for EG. Look for indicators such as user engagement, interest in esports, and relevant content on those platforms. Based on market research and available resources, select the most suitable platform(s) to expand the presence. In addition to TikTok, explore other platforms popular among the target audience, such as Instagram, Twitch, or Discord. Prioritize platforms where the target audience is already active and where EG esports gaming can leverage its strengths. The social media team must understand that every other social media platform has its own content format and style. Adapt the content strategy to match the platform's requirements and consider creating unique and engaging content that connect with the specific platform's audience. Lastly, analyze the data and performance of those plateforms to adjust accordingly to enhance enagagement. 
+- I would suggest we begin by conducting market research to understand the target audience on other potential platforms. Determine if the audience aligns with the desired target market for EG. Look for indicators such as user engagement, interest in esports, and relevant content on those platforms. Based on market research and available resources, select the most suitable platform(s) to expand the presence. In addition to TikTok, explore other platforms popular among the target audience, such as Instagram, Twitch, or Discord. Prioritize platforms where the target audience is already active and where EG esports gaming can leverage its strengths. The social media team must understand that every other social media platform has its own content format and style. Adapt the content strategy to match the platform's requirements and consider creating unique and engaging content that connect with the specific platform's audience. Lastly, analyze the data and performance of those plateforms to adjust accordingly to enhance enagagement across multiple platforms. 
 
 
 
@@ -241,6 +241,14 @@ Here, I created visualizations using Matplotlib to communicate my findings.
 
 ## 6. Act 👩🏻‍🏫
 ### Recommendations:
-* I would encourage Bellabeat to market that their device is comfortable to wear throughout the day, especially during the night or when going out (due to the lack of data on weekends).
-* I would encourage Bellabeat to promote body-positivity and inclusivity in their marketing campaigns as the data shows there are more missing weight data than sleep data. 
-* I would suggest Bellabeat to create an award system that rewards users with a digital badge or trophy when they hit 10,000 steps, which is the recommended daily average to boost health. Any sort of motivation to encourage users to increase daily steps, as the average daily steps in the dataset was about 7,600, significantly lower than 10,00. 
+* I would encourage the social media team to prioritize posting important content and announcements on Sundays and schedule the most impactful posts for this day to maximize audience engagement.
+* I would suggest to avoid posting important content on Saturday as engagement rate is the lowest on this day out of the week.
+* I would encourage the social media team to take advantage of the early morning peak in engagement rate by scheduling posts around 5:00 AM.
+* I would suggest to avoid posting around 11:00 PM as it appears to have lower engagement rate in comparision to other hours of the day.
+* I would encourage the social meida team to focus on the genearl account for creating a blanced content such as highlights, behind-the-scenes footage, team updates, and exclusive interviews with players.
+* I would encourage the social media team to allocate specific resources to create content for DOTA2 and expand to further social media platforms with content such as match highlights, analysis, player interviews, and exclusive content related to the DOTA2 scene.
+* I would suggest the social media team to focus on photo media types and focus on sharing visually appealing images that capture the essence of EG esports gaming. This can include action shots from tournaments, team photos, or even fan-generated content.
+* I would suggest to avoid posting link media types, as the engagement rate is low in comparison to other media types.
+* I would suggest the social media team to continue monitoring and experimenting with album posts to see if they consistently generate higher engagement.
+* I would encourage focusing on posting community engagement campaigns by allocating resources and time to encourage fan participation.
+
