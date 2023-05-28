@@ -117,11 +117,9 @@ print("The worst performing hour of the day for engagement rate is: {} at {:.2%}
 The best performing hour of the day for engagement rate is: 05:00 AM at 23.52%.
 The worst performing hour of the day for engagement rate is: 11:00 PM at 0.71%.		
 
-### Frequency users record sleep and weight data		
+![EngagmentPerDay](EngagementPerDay.png)		
 
-![sleepdata](https://user-images.githubusercontent.com/97275273/211120242-d19a5f40-37ae-4522-8298-91b74b991abf.png)		
-
-* Users were least likely to record sleep data during Sunday and Monday. 
+* Engagement rate appears to be the highest on Sundays.
 
 ![weightdata](https://user-images.githubusercontent.com/97275273/211120245-68194ea6-6cb2-464b-aeaa-85d32309273e.png)			
 
