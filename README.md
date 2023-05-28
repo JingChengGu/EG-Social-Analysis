@@ -72,42 +72,50 @@ This sorts the dataframe by the day of weeks and hour of the day for easier aggr
 
 
 ## 4. Analyze 📊    
+#### Task 1:
+What is the typical engagement rate EG can expect? What’s the likelihood that we can achieve a 15% engagement rate?
+```diff
+# Calculate the average engagement rate
+average_engagement_rate = data['Total Engagements'].mean() / data['Total Impressions'].mean()
+print("Average engagement rate is {:.2%}.".format(average_engagement_rate))
+
+# Calculate the likelihood of achieving a 15% engagement rate
+likelihood_15_percent = len(data[data['Total Engagements'] / data['Total Impressions'] >= 0.15]) / len(data)
+print("Likelihood of achieving 15% engagement rate is {:.2%}.".format(likelihood_15_percent))
+```
+The average engagement rate is 8.51%.
+The likelihood of achieving 15% engagement rate is 6.35%.
+#### Task 2:
+Does day of the week and time of posting affect engagement rates?
+```diff
+# Find the best performing day of the week for engagement rate
+best_day = engagement_by_day['engagement_rate'].idxmax()
+best_day_rate = engagement_by_day.loc[best_day, 'engagement_rate']
+worst_day = engagement_by_day['engagement_rate'].idxmin()
+worst_day_rate = engagement_by_day.loc[worst_day, 'engagement_rate']
+day_of_week_rate = engagement_by_day['engagement_rate']
+print(day_of_week_rate)
+print("The best performing day of the week for engagement rate is: {} at {:.2%}.".format(best_day, best_day_rate))
+print("The worst performing day of the week for engagement rate is: {} at {:.2%}.".format(worst_day, worst_day_rate))
+```
+The best performing day of the week for engagement rate is: Sunday at 10.54%.
+The worst performing day of the week for engagement rate is: Saturday at 4.84%.
 
 ```diff
-SELECT AVG(TotalMinutesAsleep) AS AvgMinutesAsleep, AVG(TotalMinutesAsleep / 60) AS AvgHoursAsleep
-FROM sleep_log;
-/* Finding the average total minutes asleep */
+# Find the best performing hour of the day for engagement rate
+best_hour = engagement_by_hour['engagement_rate'].idxmax()
+worst_hour = engagement_by_hour['engagement_rate'].idxmin()
+best_dt = datetime.datetime(2023, 1, 1, best_hour, 0, 0)
+worst_dt = datetime.datetime(2023, 1, 1, worst_hour, 0, 0)
+best_readable_time = best_dt.strftime("%I:%M %p")
+worst_readable_time = worst_dt.strftime("%I:%M %p")
+best_hour_rate = engagement_by_hour.loc[best_hour, 'engagement_rate']
+worst_hour_rate = engagement_by_hour.loc[worst_hour, 'engagement_rate']
+print("The best performing hour of the day for engagement rate is: {} at {:.2%}.".format(best_readable_time, best_hour_rate))
+print("The worst performing hour of the day for engagement rate is: {} at {:.2%}.".format(worst_readable_time, worst_hour_rate))
 ```
-The average minutes asleep is 419.4673, also about 7 hours.
-
-```diff
-SELECT AVG(TotalSteps) AS AvgSteps, AVG(TotalDistance) AS AvgDistance, AVG(Calories) AS AvgCalories
-FROM daily_activity;
-/* Finding the average total steps, total distance, and calories */
-```
-The average total steps, total distance, and calories is 7637.9106, 5.4897, and 2303.609 calories respectively. 
-
-```diff
-SELECT DISTINCT Id
-FROM daily_activity
-WHERE Id NOT IN (
-	SELECT d.Id
-	FROM daily_activity AS d 
-	JOIN sleep_log_unique AS s
-	ON d.ActivityDate = s.SleepDay AND d.Id = s.Id
-	JOIN weight_log AS w
-	ON s.SleepDay = w.Date AND s.Id = w.Id);
- /* Finding the IDs that do not have records in either the sleep log or weight log */
- 
- SELECT DISTINCT Id FROM sleep_log GROUP BY Id;
- /* Finding distinct IDs from sleep log */
- 
- SELECT DISTINCT Id FROM weight_log GROUP BY Id;
-/* Finding distinct IDs from weight log */
-```
-* There are 28 records that are either not in the sleep log or the weight log. 
-* From sleep log, there were only 24 users who recorded their sleep. 
-* From weight log, there were only 8 users who recorded their weight.		
+The best performing hour of the day for engagement rate is: 05:00 AM at 23.52%.
+The worst performing hour of the day for engagement rate is: 11:00 PM at 0.71%.		
 
 ### Frequency users record sleep and weight data		
 
