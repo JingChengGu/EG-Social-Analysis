@@ -171,8 +171,41 @@ Best Performing Campaign aside from "NA" is "Community Engagement" with 8.38%.
 #### Task 6:
 Define out a posting strategy for the EG social channels based on discoveries.
 
+#### Suggestion 1. Timing:
+
+Focus on Sundays: Since engagement rate appears to be the highest on Sundays, prioritize posting important content and announcements on this day. Schedule the most impactful posts for this time to maximize audience engagement.
+
+Avoid Posting on Saturdays: Since engagement rate appears to be the lowest on Saturdays, avoid posting important content on this day.
+
+5:00 AM peak: Take advantage of the early morning peak in engagement rate by scheduling posts around 5:00 AM. Consider sharing content that is attention-grabbing or offers exclusive early access to keep the audience engaged.
+
+Avoid Posting at 11:00 PM: Make sure to avoid posting around 11:00 PM as it appears to have lower engagement rate in comparision to other hours of the day.
+
+#### Suggestion 2. Account Types:
+
+General Account: As the engagement rate is highest for the general account, ensure a blanced content such as highlights, behind-the-scenes footage, team updates, and exclusive interviews with players.
+
+DOTA2 Account: The DOTA2 account shows high engagement out of all gaming accounts, so allocate specific resources to create content tailored to DOTA2 fans. Share match highlights, analysis, player interviews, and exclusive content related to the DOTA2 scene.
+
+#### Suggestion 3. Media Types:
+
+Focus On Photo Media Type: The engagement rate is highest for photo media types. Focus on sharing visually appealing images that capture the essence of EG esports gaming. This can include action shots from tournaments, team photos, or even fan-generated content.
+
+Avoid Link Media Type: Since the engagement rate is the lowest for link media types, I would suggest avoiding this method.
+
+#### Suggestion 4. Campaigns:
+
+Focus on Community Engagement Campaigns: Allocate resources and time to create meaningful community engagement campaigns. Encourage fan participation, conduct giveaways, polls, and other interactive activities to boost engagement and foster a sense of community among EG fans.
+
+#### Suggestion 5. Sample Size Considerations:
+
+Album Media Type: While the engagement rate appears highest for album media type, the sample size is too small to be considered valid. Nonetheless, continue monitoring and experimenting with album posts to see if they consistently generate higher engagement.
+
 #### Task 7:
-What suggestions I would give to the social media team if they want to expand their presence (e.g. if our CSGO youtube channel is doing well should we expand to TikTok)?
+What suggestions would I give to the social media team if they want to expand their presence (e.g. if our CSGO youtube channel is doing well should we expand to TikTok)?
+
+- I would suggest we begin by conducting market research to understand the target audience on other potential platforms. Determine if the audience aligns with the desired target market for EG. Look for indicators such as user engagement, interest in esports, and relevant content on those platforms. Based on market research and available resources, select the most suitable platform(s) to expand the presence. In addition to TikTok, explore other platforms popular among the target audience, such as Instagram, Twitch, or Discord. Prioritize platforms where the target audience is already active and where EG esports gaming can leverage its strengths. The social media team must understand that every other social media platform has its own content format and style. Adapt the content strategy to match the platform's requirements and consider creating unique and engaging content that connect with the specific platform's audience. Lastly, analyze the data and performance of those plateforms to adjust accordingly to enhance enagagement. 
+
 
 
 ## 5. Share 📋   
@@ -182,52 +215,29 @@ Here, I created visualizations using Matplotlib to communicate my findings.
 
 ![EngagmentPerDay](EngagementPerDay.png)		
 
-* Engagement rate appears to be the highest on Sundays of the week.
-
 ![EngagementPerHour](EngagementPerHour.png)			
 
-* Engagement rate appears to be the highest at 5:00 AM of the day. 
-
-* ![EngagementPerAccount](EngagementPerAccount.png)		
-
-* Engagement rate appears to be the highest for the general account.
+![EngagementPerAccount](EngagementPerAccount.png)		
 
 ![EngagementPerAccount](EngagementNoGeneral.png)		
 
-* Engagement rate appears to be the highest for the DOTA2 account aside from the general account.
-
 ![EngagementPerMedia](EngagementPerMedia.png)		
 
-* Engagement rate appears to be the highest for the Album media type at first glance. However, the sample size for album media type is too small to be considered valid.
-
 ![EngagementNoAlbum](EngagementNoAlbum.png)		
-
-* Aside from the album media type, the engagement rate appears tobe the highest for the photo media type.
-
-![EngagementPerMedia](EngagementPerMedia.png)		
-
-* Engagement rate appears to be the highest for the Album media type at first glance. However, the sample size for album media type is too small to be considered valid.
-
-![EngagementNoAlbum](EngagementNoAlbum.png)		
-
-* Aside from the album media type, the engagement rate appears to be the highest for the photo media type.
 
 ![EngagementPerMedia](EngagementPerCampaign.png)		
 
-* Engagement rate appears to be the highest for the campaigns categorized as N/A. However, these are the uncategorized campagins and do not inform us of any specific insight.
-
 ![EngagementNoAlbum](EngagementNoNA.png)		
-
-* Aside from the campaigns categorized as N/A, the engagement rate appears to be the highest for the Community Engagement campaign.
 ****
 ### Key findings: 
-* Users recorded weight data the least on Friday and Saturday (the beginning of the weekend). 
-* Users recorded sleep data the least during Sunday and Monday (the end of the weekend). 
-* Most people in the study were sedentary, 81%.
-* Saturday is the most active day, people take the most steps and burn the most calories and have the least amount of sedentary activity as well. 
-* People have the hardest time falling asleep on Sunday, however they also get the most amount of sleep on that day. 
-* Users burned more calories the more steps they took.
-* There is a strong correlation between amount of time spent being sedentary and amount of sleep → the more time people spent being sedentary, the less sleep they got. 
+* Engagement rate appears to be the highest on Sundays of the week.
+* Engagement rate appears to be the highest at 5:00 AM of the day.  
+* Engagement rate appears to be the highest for the general account.
+* Engagement rate appears to be the highest for the DOTA2 account aside from the general account.
+* Engagement rate appears to be the highest for the Album media type at first glance. However, the sample size for album media type is too small to be considered valid.
+* Aside from the album media type, the engagement rate appears tobe the highest for the photo media type.
+* Engagement rate appears to be the highest for the campaigns categorized as N/A. However, these are the uncategorized campagins and do not inform us of any specific insight.
+* Aside from the campaigns categorized as N/A, the engagement rate appears to be the highest for the Community Engagement campaign.
 
 ## 6. Act 👩🏻‍🏫
 ### Recommendations:
