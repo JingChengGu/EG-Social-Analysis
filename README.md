@@ -30,7 +30,7 @@ What suggestions I would give to the social media team if they want to expand th
 
 The dataset contains limitations:   
 * There are 1485 Campaigns that are categorized as N/As and not rational to be included specifically to the campign analysis process.  
-* There are 9 media types that are categorized as "Carousel", 5 media types that are categorized as "Mixed", and 4 media types that are categorized as "Album" while the rest of the media types are in the counts of hundreds or thousands. It would be improper to evaluate these three media types' engagement rates as they have a low simple size in comparision to the other media types.
+* There are 9 media types that are categorized as "Carousel", 5 media types that are categorized as "Mixed", and 4 media types that are categorized as "Album" while the rest of the media types are in the counts of hundreds or thousands. It would be improper to evaluate these three media types' engagement rates in the media type analysis process as they have a low simple size in comparision to the other media types.
 
 
 ## 3. Process 💻    
