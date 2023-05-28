@@ -233,8 +233,8 @@ Here, I created visualizations using Matplotlib to communicate my findings.
 * Engagement rate appears to be the highest for the general account.
 * Engagement rate appears to be the highest for the DOTA2 account aside from the general account.
 * Engagement rate appears to be the highest for the Album media type at first glance. However, the sample size for album media type is too small to be considered valid.
-* Aside from the album media type, the engagement rate appears tobe the highest for the photo media type.
-* Engagement rate appears to be the highest for the campaigns categorized as N/A. However, these are the uncategorized campagins and do not inform us of any specific insight.
+* Aside from the album media type, the engagement rate appears to be the highest for the photo media type.
+* Engagement rate appears to be the highest for the campaigns categorized as N/A. However, these are the uncategorized campagins and do not inform us of any specific campaigns.
 * Aside from the campaigns categorized as N/A, the engagement rate appears to be the highest for the Community Engagement campaign.
 
 ## 6. Act 🧑🏻‍🏫
