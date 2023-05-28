@@ -72,8 +72,8 @@ This sorts the dataframe by the day of weeks and hour of the day for easier aggr
 
 
 ## 4. Analyze 📊    
-### Task 1:
-What is the typical engagement rate EG can expect? What’s the likelihood that we can achieve a 15% engagement rate?
+### Task 1: What is the typical engagement rate EG can expect? What’s the likelihood that we can achieve a 15% engagement rate?
+
 ```diff
 # Calculate the average engagement rate
 average_engagement_rate = data['Total Engagements'].mean() / data['Total Impressions'].mean()
@@ -83,10 +83,10 @@ print("Average engagement rate is {:.2%}.".format(average_engagement_rate))
 likelihood_15_percent = len(data[data['Total Engagements'] / data['Total Impressions'] >= 0.15]) / len(data)
 print("Likelihood of achieving 15% engagement rate is {:.2%}.".format(likelihood_15_percent))
 ```
-The average engagement rate is 8.51%.
-The likelihood of achieving 15% engagement rate is 6.35%.
-### Task 2:
-Does day of the week and time of posting affect engagement rates?
+- The average engagement rate is 8.51%.
+- The likelihood of achieving 15% engagement rate is 6.35%.
+### Task 2: Does day of the week and time of posting affect engagement rates?
+
 ```diff
 # Find the best performing day of the week for engagement rate
 best_day = engagement_by_day['engagement_rate'].idxmax()
@@ -98,8 +98,8 @@ print(day_of_week_rate)
 print("The best performing day of the week for engagement rate is: {} at {:.2%}.".format(best_day, best_day_rate))
 print("The worst performing day of the week for engagement rate is: {} at {:.2%}.".format(worst_day, worst_day_rate))
 ```
-The best performing day of the week for engagement rate is: Sunday at 10.54%.
-The worst performing day of the week for engagement rate is: Saturday at 4.84%.
+- The best performing day of the week for engagement rate is: Sunday at 10.54%.
+- The worst performing day of the week for engagement rate is: Saturday at 4.84%.
 
 ```diff
 # Find the best performing hour of the day for engagement rate
@@ -114,11 +114,11 @@ worst_hour_rate = engagement_by_hour.loc[worst_hour, 'engagement_rate']
 print("The best performing hour of the day for engagement rate is: {} at {:.2%}.".format(best_readable_time, best_hour_rate))
 print("The worst performing hour of the day for engagement rate is: {} at {:.2%}.".format(worst_readable_time, worst_hour_rate))
 ```
-The best performing hour of the day for engagement rate is: 05:00 AM at 23.52%.
-The worst performing hour of the day for engagement rate is: 11:00 PM at 0.71%.		
+- The best performing hour of the day for engagement rate is: 05:00 AM at 23.52%.
+- The worst performing hour of the day for engagement rate is: 11:00 PM at 0.71%.		
 
-### Task 3:
-How are EG game titles doing in terms of social performance? Is there a specific game EG should focus more on or less?
+### Task 3: How are EG game titles doing in terms of social performance? Is there a specific game EG should focus more on or less?
+
 ```diff
 best_acc_rate = game_performance.loc[best_account, 'Engagement Rate']
 worst_acc_rate = game_performance.loc[worst_account, 'Engagement Rate']
@@ -129,12 +129,12 @@ rate_no_general = no_general.loc[best_account_no_general, 'Engagement Rate']
 print('The best performing account without including "General" is the "{}" account with the engagement rate of {:.02%}.'.format(best_account_no_general, rate_no_general))
 print('The worst performing account is the "{}" account with the engagement rate of {:.02%}.'.format(worst_account, worst_acc_rate))
 ```
-The best performing account is the "General" account with the engagement rate of 8.94%.
-The best performing account without including "General" is the "DOTA2" account with the engagement rate of 6.67%.
-The worst performing account is the "Content Creators" account with the engagement rate of 3.07%.
+- The best performing account is the "General" account with the engagement rate of 8.94%.
+- The best performing account without including "General" is the "DOTA2" account with the engagement rate of 6.67%.
+- The worst performing account is the "Content Creators" account with the engagement rate of 3.07%.
 
-### Task 4:
-What media type performs the best?
+### Task 4: What media type performs the best?
+
 ```diff
 best_media = media_performance['Engagement Rate'].idxmax()
 worst_media = media_performance['Engagement Rate'].idxmin()
@@ -150,12 +150,12 @@ best_media_rate = no_album.loc[best_media, 'Engagement Rate']
 
 print('The best performing media that is not the album media is the "{}" media with the engagement rate of {:.02%}.'.format(best_media, best_media_rate))
 ```
-The best performing media is the "Album" media with the engagement rate of 40.00%.
-The worst performing media is the "Link" media with the engagement rate of 0.97%.
-The best performing media that is not the album media is the "Photo" media with the engagement rate of 8.88%.
+- The best performing media is the "Album" media with the engagement rate of 40.00%.
+- The worst performing media is the "Link" media with the engagement rate of 0.97%.
+- The best performing media that is not the album media is the "Photo" media with the engagement rate of 8.88%.
 
-### Task 5: 
-What is EG's best performing campaign?
+### Task 5: What is EG's best performing campaign?
+
 ```diff
 best_campaign = campaign_performance['Engagement Rate'].idxmax()
 best_campaign_rate = campaign_performance.loc[best_campaign, "Engagement Rate"]
@@ -165,11 +165,10 @@ best_no_NA = no_NA['Engagement Rate'].idxmax()
 best_no_NA_rate = no_NA.loc[best_no_NA, 'Engagement Rate']
 print('Best Performing Campaign aside from "NA" is "{}" with {:.02%}.'.format(best_no_NA, best_no_NA_rate))
 ```
-Best Performing Campaign is categorized as N/A with 14.07% and these are the campaigns that are not categorized.
-Best Performing Campaign aside from "NA" is "Community Engagement" with 8.38%.
+- Best Performing Campaign is categorized as N/A with 14.07% and these are the campaigns that are not categorized.
+- Best Performing Campaign aside from "NA" is "Community Engagement" with 8.38%.
 
-### Task 6:
-Define out a posting strategy for the EG social channels based on discoveries.
+### Task 6: Define out a posting strategy for the EG social channels based on discoveries.
 
 #### Suggestion 1. Timing:
 
@@ -201,8 +200,7 @@ Focus on Community Engagement Campaigns: Allocate resources and time to create m
 
 Album Media Type: While the engagement rate appears highest for album media type, the sample size is too small to be considered valid. Nonetheless, continue monitoring and experimenting with album posts to see if they consistently generate higher engagement.
 
-### Task 7:
-What suggestions would I give to the social media team if they want to expand their presence (e.g. if our CSGO youtube channel is doing well should we expand to TikTok)?
+### Task 7: What suggestions would I give to the social media team if they want to expand their presence (e.g. if our CSGO youtube channel is doing well should we expand to TikTok)?
 
 - I would suggest we begin by conducting market research to understand the target audience on other potential platforms. Determine if the audience aligns with the desired target market for EG. Look for indicators such as user engagement, interest in esports, and relevant content on those platforms. Based on market research and available resources, select the most suitable platform(s) to expand the presence. In addition to TikTok, explore other platforms popular among the target audience, such as Instagram, Twitch, or Discord. Prioritize platforms where the target audience is already active and where EG esports gaming can leverage its strengths. The social media team must understand that every other social media platform has its own content format and style. Adapt the content strategy to match the platform's requirements and consider creating unique and engaging content that connect with the specific platform's audience. Lastly, analyze the data and performance of those plateforms to adjust accordingly to enhance enagagement across multiple platforms. 
 
