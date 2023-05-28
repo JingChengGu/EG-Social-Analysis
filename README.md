@@ -117,14 +117,6 @@ print("The worst performing hour of the day for engagement rate is: {} at {:.2%}
 The best performing hour of the day for engagement rate is: 05:00 AM at 23.52%.
 The worst performing hour of the day for engagement rate is: 11:00 PM at 0.71%.		
 
-![EngagmentPerDay](EngagementPerDay.png)		
-
-* Engagement rate appears to be the highest on Sundays of the week.
-
-![EngagementPerHour](EngagementPerHour.png)			
-
-* Engagement rate appears to be the highest at 5:00 AM of the day. 
-
 #### Task 3:
 How are EG game titles doing in terms of social performance? Is there a specific game EG should focus more on or less?
 ```diff
@@ -141,76 +133,92 @@ The best performing account is the "General" account with the engagement rate of
 The best performing account without including "General" is the "DOTA2" account with the engagement rate of 6.67%.
 The worst performing account is the "Content Creators" account with the engagement rate of 3.07%.
 
-![EngagementPerAccount](EngagementPerAccount.png)		
+#### Task 4:
+What media type performs the best?
+```diff
+best_media = media_performance['Engagement Rate'].idxmax()
+worst_media = media_performance['Engagement Rate'].idxmin()
+best_media_rate = media_performance.loc[best_media, 'Engagement Rate']
+worst_media_rate = media_performance.loc[worst_media, 'Engagement Rate']
+print('The best performing media is the "{}" media with the engagement rate of {:.02%}.'.format(best_media, best_media_rate))
+print('The worst performing media is the "{}" media with the engagement rate of {:.02%}.'.format(worst_media, worst_media_rate))
 
-* Engagement rate appears to be the highest for the general account.
+# we should drop the album media type to evaluate the data without the outlier.
+no_album = media_performance.drop("Album")
+best_media = no_album['Engagement Rate'].idxmax()
+best_media_rate = no_album.loc[best_media, 'Engagement Rate']
 
-![EngagementPerAccount](EngagementNoGeneral.png)			
+print('The best performing media that is not the album media is the "{}" media with the engagement rate of {:.02%}.'.format(best_media, best_media_rate))
+```
+The best performing media is the "Album" media with the engagement rate of 40.00%.
+The worst performing media is the "Link" media with the engagement rate of 0.97%.
+The best performing media that is not the album media is the "Photo" media with the engagement rate of 8.88%.
 
-* Engagement rate appears to be the highest for the DOTA2 account aside from the general account.
+#### Task 5: 
+What is EG's best performing campaign?
+```diff
+best_campaign = campaign_performance['Engagement Rate'].idxmax()
+best_campaign_rate = campaign_performance.loc[best_campaign, "Engagement Rate"]
+print("Best Performing Campaign is categorized as {} with {:.02%} and these are the campaigns that are not categorized.".format(best_campaign, best_campaign_rate))
+no_NA = campaign_performance.drop("N/A")
+best_no_NA = no_NA['Engagement Rate'].idxmax()
+best_no_NA_rate = no_NA.loc[best_no_NA, 'Engagement Rate']
+print('Best Performing Campaign aside from "NA" is "{}" with {:.02%}.'.format(best_no_NA, best_no_NA_rate))
+```
+Best Performing Campaign is categorized as N/A with 14.07% and these are the campaigns that are not categorized.
+Best Performing Campaign aside from "NA" is "Community Engagement" with 8.38%.
+
+#### Task 6:
+Define out a posting strategy for the EG social channels based on discoveries.
+
+#### Task 7:
+What suggestions I would give to the social media team if they want to expand their presence (e.g. if our CSGO youtube channel is doing well should we expand to TikTok)?
+
+
 ## 5. Share 📋   
 Here, I created visualizations using Matplotlib to communicate my findings.   
 
-🎨 [Link to Jupyter Notebook](https://github.com/codinglovespri/BellabeatCaseStudy/blob/89f5566c740876ef5a602267910f980a7c6295de/Bellabeat%20Analysis%20-%20Google%20Data%20Analytics%20Capstone.ipynb)  
+🎨 [Link to Jupyter Notebook](https://github.com/JingChengGu/EG-Social-Analysis/blob/main/social_analysis.ipynb)  
 
-![avgsteps](https://user-images.githubusercontent.com/97275273/211120742-243f087b-21f2-4e6f-b3e7-bcc65a60c9df.png)
+![EngagmentPerDay](EngagementPerDay.png)		
 
-![avgcalories (1)](https://user-images.githubusercontent.com/97275273/211120754-e0a163be-2670-494c-9c1d-6a501cb22d52.png)
+* Engagement rate appears to be the highest on Sundays of the week.
 
-![avgsedentaryminutes](https://user-images.githubusercontent.com/97275273/211120763-971f356b-1680-4907-a7d0-7150279e3436.png)
+![EngagementPerHour](EngagementPerHour.png)			
 
-### Sleep 💤
+* Engagement rate appears to be the highest at 5:00 AM of the day. 
 
-![avgsleep](https://user-images.githubusercontent.com/97275273/211120866-21c29374-c4d9-464c-8fab-8dab9c3778ca.png)
+* ![EngagementPerAccount](EngagementPerAccount.png)		
 
-![timetosleep](https://user-images.githubusercontent.com/97275273/211120858-a4f186fb-7eca-4fa5-9ded-24d355c555ca.png)
+* Engagement rate appears to be the highest for the general account.
 
-### Calories vs Sleep 🏃‍♂️
+![EngagementPerAccount](EngagementNoGeneral.png)		
 
-![CaloriesBurned](https://user-images.githubusercontent.com/97275273/211120386-6ad15d54-0d91-430f-83de-00e9d0a55884.png)
+* Engagement rate appears to be the highest for the DOTA2 account aside from the general account.
 
-``` diff!
-The more steps taken in a day, the more calories a user will burn.    
-```
-![CaloriesBurnedMedian](https://user-images.githubusercontent.com/97275273/211120426-4091f6a2-4ed6-4585-aa0b-5e7ac0e33621.png)
+![EngagementPerMedia](EngagementPerMedia.png)		
 
-``` diff
-The same graph, with the median steps and median calories burned included. 
-```		
-### Activity Level vs Sleep 🏋️‍♀️
- 
-I plotted the line of regression in black to identify the correlation easier. 
-![sedentaryandsleep](https://user-images.githubusercontent.com/97275273/211120940-1f334f5e-74dd-415c-bcdd-664bd57bb862.png)
+* Engagement rate appears to be the highest for the Album media type at first glance. However, the sample size for album media type is too small to be considered valid.
 
-```diff
-Correlation coefficient: -0.6010731396971011    
-There is a pretty strong negative correlation between the two variables, showing that the more sedentary a user is, the less sleep they get.   
-```
- 
-![lightlyactiveandsleep](https://user-images.githubusercontent.com/97275273/211120962-7ba8278e-7f95-4258-a70d-db4595f815cc.png)
+![EngagementNoAlbum](EngagementNoAlbum.png)		
 
-```diff
-Correlation coefficient: 0.027583356789564462
-There is not a strong correlation between the two variables.
-```
+* Aside from the album media type, the engagement rate appears tobe the highest for the photo media type.
 
-![fairlyactiveandsleep](https://user-images.githubusercontent.com/97275273/211120971-08cea67b-c669-465d-8a3a-9fabe7f535bf.png)
+![EngagementPerMedia](EngagementPerMedia.png)		
 
-```diff
-Correlation coefficient: -0.2492079302480945
-There is not a strong correlation between the two variables.
-```
-![veryactiveandsleep](https://user-images.githubusercontent.com/97275273/211120974-2f6aafa7-dbd5-4e52-965e-7a0175208f6e.png)
+* Engagement rate appears to be the highest for the Album media type at first glance. However, the sample size for album media type is too small to be considered valid.
 
-```diff
-Corrleation coefficient: -0.08812657953070487
-There is not a strong correlation between the two variables.
-```
+![EngagementNoAlbum](EngagementNoAlbum.png)		
 
-![PercentageBreakdown](https://user-images.githubusercontent.com/97275273/211120986-ff54ab4c-92ff-472b-8852-4ddaed82ea8b.png)
-```diff
-A breakdown of the activity level amongst the participants.
-```
+* Aside from the album media type, the engagement rate appears to be the highest for the photo media type.
+
+![EngagementPerMedia](EngagementPerCampaign.png)		
+
+* Engagement rate appears to be the highest for the campaigns categorized as N/A. However, these are the uncategorized campagins and do not inform us of any specific insight.
+
+![EngagementNoAlbum](EngagementNoNA.png)		
+
+* Aside from the campaigns categorized as N/A, the engagement rate appears to be the highest for the Community Engagement campaign.
 ****
 ### Key findings: 
 * Users recorded weight data the least on Friday and Saturday (the beginning of the weekend). 
