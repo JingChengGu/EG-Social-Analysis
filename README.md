@@ -239,7 +239,7 @@ Here, I created visualizations using Matplotlib to communicate my findings.
 * Engagement rate appears to be the highest for the campaigns categorized as N/A. However, these are the uncategorized campagins and do not inform us of any specific insight.
 * Aside from the campaigns categorized as N/A, the engagement rate appears to be the highest for the Community Engagement campaign.
 
-## 6. Act 👩🏻‍🏫
+## 6. Act 🧑🏻‍🏫
 ### Recommendations:
 * I would encourage the social media team to prioritize posting important content and announcements on Sundays and schedule the most impactful posts for this day to maximize audience engagement.
 * I would suggest to avoid posting important content on Saturday as engagement rate is the lowest on this day out of the week.
