@@ -119,13 +119,35 @@ The worst performing hour of the day for engagement rate is: 11:00 PM at 0.71%.
 
 ![EngagmentPerDay](EngagementPerDay.png)		
 
-* Engagement rate appears to be the highest on Sundays.
+* Engagement rate appears to be the highest on Sundays of the week.
 
-![weightdata](https://user-images.githubusercontent.com/97275273/211120245-68194ea6-6cb2-464b-aeaa-85d32309273e.png)			
+![EngagementPerHour](EngagementPerHour.png)			
 
-* Users were least likely to record weight data during Friday and Saturday. 
+* Engagement rate appears to be the highest at 5:00 AM of the day. 
 
+#### Task 3:
+How are EG game titles doing in terms of social performance? Is there a specific game EG should focus more on or less?
+```diff
+best_acc_rate = game_performance.loc[best_account, 'Engagement Rate']
+worst_acc_rate = game_performance.loc[worst_account, 'Engagement Rate']
+print('The best performing account is the "{}" account with the engagement rate of {:.02%}.'.format(best_account, best_acc_rate))
+no_general = game_performance.drop("General")
+best_account_no_general = no_general['Engagement Rate'].idxmax()
+rate_no_general = no_general.loc[best_account_no_general, 'Engagement Rate']
+print('The best performing account without including "General" is the "{}" account with the engagement rate of {:.02%}.'.format(best_account_no_general, rate_no_general))
+print('The worst performing account is the "{}" account with the engagement rate of {:.02%}.'.format(worst_account, worst_acc_rate))
+```
+The best performing account is the "General" account with the engagement rate of 8.94%.
+The best performing account without including "General" is the "DOTA2" account with the engagement rate of 6.67%.
+The worst performing account is the "Content Creators" account with the engagement rate of 3.07%.
 
+![EngagementPerAccount](EngagementPerAccount.png)		
+
+* Engagement rate appears to be the highest for the general account.
+
+![EngagementPerAccount](EngagementNoGeneral.png)			
+
+* Engagement rate appears to be the highest for the DOTA2 account aside from the general account.
 ## 5. Share 📋   
 Here, I created visualizations using Matplotlib to communicate my findings.   
 
