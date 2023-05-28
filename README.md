@@ -184,7 +184,7 @@ Avoid Posting at 11:00 PM: Make sure to avoid posting around 11:00 PM as it appe
 
 General Account: As the engagement rate is highest for the general account, ensure to focus on this account for creating a blanced content such as highlights, behind-the-scenes footage, team updates, and exclusive interviews with players.
 
-DOTA2 Account: The DOTA2 account shows high engagement out of all gaming accounts, so allocate specific resources to create content tailored to DOTA2 fans. Share match highlights, analysis, player interviews, and exclusive content related to the DOTA2 scene.
+DOTA2 Account: The DOTA2 account shows high engagement out of all gaming accounts, so allocate specific resources to create content tailored to DOTA2 fans. Share match highlights, analysis, player interviews, and exclusive content related to the DOTA2 scene. I would also suggest expanding DOTA2 to multiple different platforms to maximize popularity.
 
 #### Suggestion 3. Media Types:
 
